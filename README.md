@@ -1,6 +1,6 @@
 Steps: 
 
-1. - VB=> Create Volume
+1. - VB=> Create Raw Volume
 2. - cd rook/deploy/examples
 3. - rook/deploy/examples/operator.yaml :
         - a. set ROOK_ENABLE_DISCOVERY_DAEMON: "true"
