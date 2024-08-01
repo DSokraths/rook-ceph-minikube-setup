@@ -1,6 +1,6 @@
 Steps: 
 
-1. VB=> Create Volume
+1. - VB=> Create Volume
 2. - git clone --single-branch --branch v1.14.9 https://github.com/rook/rook.git
 3. - cd rook/deploy/examples
 4. - rook/deploy/examples/operator.yaml : set ROOK_ENABLE_DISCOVERY_DAEMON: "true"
