@@ -1,16 +1,15 @@
 Steps: 
 
 1. - VB=> Create Volume
-2. - git clone --single-branch --branch v1.14.9 https://github.com/rook/rook.git
-3. - cd rook/deploy/examples
-4. - rook/deploy/examples/operator.yaml : set ROOK_ENABLE_DISCOVERY_DAEMON: "true"
-					  + change ports CSI_RBD_GRPC_METRICS_PORT: "9092"
-5. - rook/deploy/examples/cluster.yaml  : uncomment provider = host
-6. - inside cluster.yaml : 		  + change mon count to 1.
-7. - kubectl apply -f operator.yaml
-8. - kubectl apply -f crds common cluster-test
-9. - kubectl delete -f cluster.yaml 
-10.- kubectl delete -f operator.yaml 
+2. - cd rook/deploy/examples
+3. - rook/deploy/examples/operator.yaml : a. set ROOK_ENABLE_DISCOVERY_DAEMON: "true"
+					  b. change ports CSI_RBD_GRPC_METRICS_PORT: "9092"
+4. - rook/deploy/examples/cluster.yaml  : a. uncomment provider = host
+		        		  b. change mon count to 1.
+5. - kubectl apply -f operator.yaml
+6. - kubectl apply -f crds common cluster-test
+7. - kubectl delete -f cluster.yaml 
+8. - kubectl delete -f operator.yaml 
 
 
 After Installation : 
