@@ -2,10 +2,14 @@ Steps:
 
 1. - VB=> Create Volume
 2. - cd rook/deploy/examples
-3. - rook/deploy/examples/operator.yaml : a. set ROOK_ENABLE_DISCOVERY_DAEMON: "true"
-					  b. change ports CSI_RBD_GRPC_METRICS_PORT: "9092"
-4. - rook/deploy/examples/cluster.yaml  : a. uncomment provider = host
-		        		  b. change mon count to 1.
+3. - rook/deploy/examples/operator.yaml :
+   - a. set ROOK_ENABLE_DISCOVERY_DAEMON: "true"
+   - b. change ports CSI_RBD_GRPC_METRICS_PORT: "9092"
+     
+4. - rook/deploy/examples/cluster.yaml  :
+   - a. uncomment provider = host
+   - b. change mon count to 1.
+     
 5. - kubectl apply -f operator.yaml
 6. - kubectl apply -f crds common cluster-test
 7. - kubectl delete -f cluster.yaml 
